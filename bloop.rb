@@ -11,7 +11,7 @@ class Bloop < Formula
 
   def install
       mkdir "bin"
-      system "python2", "install.py", "--dest", "bin", "--version", version
+      system "python2.7", "install.py", "--dest", "bin", "--version", version
       File.delete("bin/coursier")
       prefix.install "bin"
   end
