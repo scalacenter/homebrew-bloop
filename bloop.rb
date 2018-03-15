@@ -1,9 +1,9 @@
 class Bloop < Formula
   desc "Bloop gives you fast edit/compile/test workflows for Scala."
   homepage "https://github.com/scalacenter/bloop"
-  version "1.0.0-M6"
-  url "https://github.com/scalacenter/bloop/releases/download/v1.0.0-M6/install.py"
-  sha256 "afa915806da781971e1f04430951ffc14e5e0c57ed33f5e501ad1c8908db059c"
+  version "1.0.0-M7"
+  url "https://github.com/scalacenter/bloop/releases/download/v1.0.0-M7/install.py"
+  sha256 "245a3d67a04651817790a11e6352c5c6fc3f8f4251c81ef2fd7b85eaf79ffeda"
   bottle :unneeded
 
   depends_on "python"
@@ -12,7 +12,10 @@ class Bloop < Formula
   def install
       mkdir "bin"
       system "python", "install.py", "--dest", "bin", "--version", version
+      zsh_completion.install "bin/zsh/_bloop"
+      bash_completion.install "bin/bash/bloop"
       File.delete("bin/blp-coursier")
+
       prefix.install "bin"
   end
 
