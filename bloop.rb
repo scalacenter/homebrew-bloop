@@ -1,9 +1,9 @@
 class Bloop < Formula
   desc "Bloop gives you fast edit/compile/test workflows for Scala."
   homepage "https://github.com/scalacenter/bloop"
-  version "1.0.0-M8"
-  url "https://github.com/scalacenter/bloop/releases/download/v1.0.0-M8/install.py"
-  sha256 "2865d0013e0f3d5fd0109c909b4475c6d8399bf21c5023a37d082d43eb24de5a"
+  version "1.0.0-M9"
+  url "https://github.com/scalacenter/bloop/releases/download/v1.0.0-M9/install.py"
+  sha256 "be5142fdfd999dbe4481f2f34eadc4feb2a70a11c003f886d157d3a9e99c8572"
   bottle :unneeded
 
   depends_on "python"
