@@ -15,8 +15,9 @@ class Bloop < Formula
       zsh_completion.install "bin/zsh/_bloop"
       bash_completion.install "bin/bash/bloop"
       File.delete("bin/blp-coursier")
-      File.mkdir_p("log/bloop/")
+      FileUtils.mkdir_p("log/bloop/")
 
+      prefix.install "log"
       prefix.install "bin"
   end
 
