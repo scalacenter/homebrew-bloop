@@ -14,11 +14,13 @@ class Bloop < Formula
       system "python3", "install.py", "--dest", "bin", "--version", version
       zsh_completion.install "bin/zsh/_bloop"
       bash_completion.install "bin/bash/bloop"
+    
       File.delete("bin/blp-coursier")
       FileUtils.mkdir_p("log/bloop/")
+      FileUtils.chmod_R 0777, "log"
 
-      prefix.install "log"
       prefix.install "bin"
+      prefix.install "log"
   end
 
   def plist; <<~EOS
