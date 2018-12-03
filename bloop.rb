@@ -1,9 +1,9 @@
 class Bloop < Formula
   desc "Bloop gives you fast edit/compile/test workflows for Scala."
   homepage "https://github.com/scalacenter/bloop"
-  version "1.0.0"
-  url "https://github.com/scalacenter/bloop/releases/download/v1.0.0/install.py"
-  sha256 "7c9cf1a838f2a8164b08dafd3c7b5e96f849f4ada3e9293a4d4f204776891bf2"
+  version "1.1.0+0-35327239+20181203-1151"
+  url "https://github.com/scalacenter/bloop/releases/download/v1.1.0/install.py"
+  sha256 "aba9ac318e45093535b537839fdf9bc6b880ac24d1834d2f221ac14b47db514a"
   bottle :unneeded
 
   depends_on "python3"
@@ -14,6 +14,7 @@ class Bloop < Formula
       system "python3", "install.py", "--dest", "bin", "--version", version
       zsh_completion.install "bin/zsh/_bloop"
       bash_completion.install "bin/bash/bloop"
+      fish_completion.install "bin/fish/bloop.fish"
 
       File.delete("bin/blp-coursier")
 
@@ -41,9 +42,9 @@ class Bloop < Formula
     <key>KeepAlive</key>
     <true/>
     <key>StandardOutPath</key>
-    <string>#{prefix}/log/bloop/bloop.out.log</string>
+    <string>#{var}/log/bloop/bloop.out.log</string>
     <key>StandardErrorPath</key>
-    <string>#{prefix}/log/bloop/bloop.err.log</string>
+    <string>#{var}/log/bloop/bloop.err.log</string>
 </dict>
 </plist>
           EOS
