@@ -42,9 +42,9 @@ class Bloop < Formula
     <key>KeepAlive</key>
     <true/>
     <key>StandardOutPath</key>
-    <string>#{var}/log/bloop/bloop.out.log</string>
+    <string>#{prefix}/log/bloop/bloop.out.log</string>
     <key>StandardErrorPath</key>
-    <string>#{var}/log/bloop/bloop.err.log</string>
+    <string>#{prefix}/log/bloop/bloop.err.log</string>
 </dict>
 </plist>
           EOS
