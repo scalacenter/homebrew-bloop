@@ -1,9 +1,9 @@
 class Bloop < Formula
   desc "Bloop gives you fast edit/compile/test workflows for Scala."
   homepage "https://github.com/scalacenter/bloop"
-  version "1.1.0"
-  url "https://github.com/scalacenter/bloop/releases/download/v1.1.0/install.py"
-  sha256 "15eb2c9553b785d980ec3e3ce34e45bbf4c1a3ced095b24a4f74914293a1553a"
+  version "1.1.1"
+  url "https://github.com/scalacenter/bloop/releases/download/v1.1.1/install.py"
+  sha256 "f40bd23e0059f3a82fb322d0e287b6d4eeede98178839afcb02027d8cd9de5d4"
   bottle :unneeded
 
   depends_on "python3"
@@ -15,8 +15,6 @@ class Bloop < Formula
       zsh_completion.install "bin/zsh/_bloop"
       bash_completion.install "bin/bash/bloop"
       fish_completion.install "bin/fish/bloop.fish"
-
-      File.delete("bin/blp-coursier")
 
       # We need to create these files manually here, because otherwise launchd
       # will create them with owner set to `root` (see the plist file below).
