@@ -3,7 +3,7 @@ class Bloop < Formula
   homepage "https://github.com/scalacenter/bloop"
   version "1.1.2"
   url "https://github.com/scalacenter/bloop/releases/download/v1.1.2/install.py"
-  sha256 "4c996388885cb5be9603a24ca4406c96f7d7cc31b48945bc86f96e472ac7bdf2"
+  sha256 "e701d237039e01623b936b9d6498fcd6ef14af9118e9414574febbad38021ce2"
   bottle :unneeded
 
   depends_on "python3"
