@@ -36,7 +36,8 @@ class Bloop < Formula
     <string>#{plist_name}</string>
     <key>ProgramArguments</key>
     <array>
-        <string>#{bin}/blp-server</string>
+        <string>#{bin}/bloop</string>
+        <string>server</string>
     </array>
     <key>KeepAlive</key>
     <true/>
