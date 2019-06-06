@@ -1,7 +1,7 @@
 class Bloop < Formula
   desc "Bloop is a build server to compile, test and run Scala fast"
   homepage "https://github.com/scalacenter/bloop"
-  version "1.3.0+0-21a1cdbf+20190606-1937"
+  version "1.3.0"
   url "https://github.com/scalacenter/bloop/releases/download/v1.3.0/install.py"
   sha256 "c0b694c8f4085dc338f33a894f56ae099cce0ab2d13d8f2e396f5df809bc0a79"
   bottle :unneeded
