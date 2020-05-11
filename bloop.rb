@@ -16,7 +16,7 @@ class Bloop < Formula
   end
 
   resource "zsh_completions" do
-    url "https://github.com/scalacenter/bloop/releases/downloadv1.4.0/zsh-completions"
+    url "https://github.com/scalacenter/bloop/releases/download/v1.4.0/zsh-completions"
     sha256 "58d32c3f005f7791237916d1b5cd3a942115236155a0b7eba8bf36391d06eff7"
   end
 
