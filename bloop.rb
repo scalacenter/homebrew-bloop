@@ -11,17 +11,17 @@ class Bloop < Formula
   depends_on :java => "1.8+"
 
   resource "bash_completions" do
-    url "https://raw.githubusercontent.com/scalacenter/bloop/v1.4.0-RC3/bash-completions"
+    url "https://raw.githubusercontent.com/scalacenter/bloop/releases/download/v1.4.0-RC3/bash-completions"
     sha256 "da6b7ecd4109bd0ff98b1c452d9dd9d26eee0d28ff604f6c83fb8d3236a6bdd1"
   end
 
   resource "zsh_completions" do
-    url "https://raw.githubusercontent.com/scalacenter/bloop/v1.4.0-RC3/zsh-completions"
+    url "https://raw.githubusercontent.com/scalacenter/bloop/releases/download/v1.4.0-RC3/zsh-completions"
     sha256 "58d32c3f005f7791237916d1b5cd3a942115236155a0b7eba8bf36391d06eff7"
   end
 
   resource "fish_completions" do
-    url "https://raw.githubusercontent.com/scalacenter/bloop/v1.4.0-RC3/fish-completions"
+    url "https://raw.githubusercontent.com/scalacenter/bloop/releases/download/v1.4.0-RC3/fish-completions"
     sha256 "a012a5cc76b57dbce17fad237f3b97bea6946ffc6ea0b61ac2281141038248dd"
   end
 
