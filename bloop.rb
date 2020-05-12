@@ -33,7 +33,7 @@ class Bloop < Formula
       system "coursier", "install", "--install-dir", "bin", "--default-channels=false", "--channel", "channel", "bloop", "-J-Divy.home=/home/runner/.ivy2"
 
       resource("bash_completions").stage {
-        mv "bash-completions" "bloop"
+        mv "bash-completions", "bloop"
         bash_completion.install "bloop"
       }
       resource("zsh_completions").stage { zsh_completion.install "_bloop" }
