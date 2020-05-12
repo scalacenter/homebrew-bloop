@@ -36,8 +36,16 @@ class Bloop < Formula
         mv "bash-completions", "bloop"
         bash_completion.install "bloop"
       }
-      resource("zsh_completions").stage { zsh_completion.install "_bloop" }
-      resource("fish_completions").stage { fish_completion.install "bloop.fish" }
+      
+      resource("zsh_completions").stage {
+        mv "zsh-completions", "_bloop"
+        zsh_completion.install "_bloop"
+      }
+      
+      resource("fish_completions").stage {
+        mv "fish-completions", "bloop.fish"
+        fish_completion.install "bloop.fish"
+      }
 
       prefix.install "bin"
   end
