@@ -32,7 +32,10 @@ class Bloop < Formula
       mv "bloop-coursier.json", "channel/bloop.json"
       system "coursier", "install", "--install-dir", "bin", "--default-channels=false", "--channel", "channel", "bloop", "-J-Divy.home=/home/runner/.ivy2"
 
-      resource("bash_completions").stage { bash_completion.install "bloop" }
+      resource("bash_completions").stage {
+        mv "bash-completions" "bloop"
+        bash_completion.install "bloop"
+      }
       resource("zsh_completions").stage { zsh_completion.install "_bloop" }
       resource("fish_completions").stage { fish_completion.install "bloop.fish" }
 
