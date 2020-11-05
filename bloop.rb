@@ -1,9 +1,9 @@
 class Bloop < Formula
   desc "Installs the Bloop CLI for Bloop, a build server to compile, test and run Scala fast"
   homepage "https://github.com/scalacenter/bloop"
-  version "1.4.4"
-  url "https://github.com/scalacenter/bloop/releases/download/v1.4.4/bloop-coursier.json"
-  sha256 "7b89386edeb099a44f08ea66f8004e8a4f4ed3b266f04914db55dbbb5229cedf"
+  version "1.4.5"
+  url "file:///home/tgodzik/Documents/bloop/frontend/target/local/bloop-coursier.json"
+  sha256 "72d054e13c8c28c4b50327851ae849e35a1ba8e33c34fb423ccd18b6c35992d5"
   bottle :unneeded
 
   depends_on "bash-completion"
@@ -11,17 +11,17 @@ class Bloop < Formula
   depends_on :java => "1.8+"
 
   resource "bash_completions" do
-    url "https://github.com/scalacenter/bloop/releases/download/v1.4.4/bash-completions"
+    url "file:///home/tgodzik/Documents/bloop/etc/bash-completions"
     sha256 "da6b7ecd4109bd0ff98b1c452d9dd9d26eee0d28ff604f6c83fb8d3236a6bdd1"
   end
 
   resource "zsh_completions" do
-    url "https://github.com/scalacenter/bloop/releases/download/v1.4.4/zsh-completions"
+    url "file:///home/tgodzik/Documents/bloop/etc/zsh-completions"
     sha256 "58d32c3f005f7791237916d1b5cd3a942115236155a0b7eba8bf36391d06eff7"
   end
 
   resource "fish_completions" do
-    url "https://github.com/scalacenter/bloop/releases/download/v1.4.4/fish-completions"
+    url "file:///home/tgodzik/Documents/bloop/etc/fish-completions"
     sha256 "a012a5cc76b57dbce17fad237f3b97bea6946ffc6ea0b61ac2281141038248dd"
   end
 
@@ -30,7 +30,7 @@ class Bloop < Formula
       mkdir "channel"
 
       mv "bloop-coursier.json", "channel/bloop.json"
-      system "coursier", "install", "--install-dir", "bin", "--default-channels=false", "--channel", "channel", "bloop", "-J-Divy.home=/home/runner/.ivy2"
+      system "coursier", "install", "--install-dir", "bin", "--default-channels=false", "--channel", "channel", "bloop", "-J-Divy.home=/home/tgodzik/.ivy2"
 
       resource("bash_completions").stage {
         mv "bash-completions", "bloop"
