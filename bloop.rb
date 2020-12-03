@@ -8,7 +8,7 @@ class Bloop < Formula
 
   depends_on "bash-completion"
   depends_on "coursier/formulas/coursier"
-  depends_on :java => "openjdk@8+"
+  depends_on "openjdk@8+"
 
   resource "bash_completions" do
     url "https://github.com/scalacenter/bloop/releases/download/v1.4.6/bash-completions"
