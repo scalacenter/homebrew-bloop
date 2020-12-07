@@ -8,7 +8,7 @@ class Bloop < Formula
 
   depends_on "bash-completion"
   depends_on "coursier/formulas/coursier"
-  depends_on "openjdk@8+"
+  depends_on "openjdk"
 
   resource "bash_completions" do
     url "https://github.com/scalacenter/bloop/releases/download/v1.4.6/bash-completions"
@@ -30,7 +30,7 @@ class Bloop < Formula
       mkdir "channel"
 
       mv "bloop-coursier.json", "channel/bloop.json"
-      system "coursier", "install", "--install-dir", "bin", "--default-channels=false", "--channel", "channel", "bloop", "-J-Divy.home=/Users/mduhem/.ivy2"
+      system "coursier", "install", "--install-dir", "bin", "--default-channels=false", "--channel", "channel", "bloop"
 
       resource("bash_completions").stage {
         mv "bash-completions", "bloop"
