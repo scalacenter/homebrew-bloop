@@ -1,9 +1,9 @@
 class Bloop < Formula
   desc "Installs the Bloop CLI for Bloop, a build server to compile, test and run Scala fast"
   homepage "https://github.com/scalacenter/bloop"
-  version "1.4.9"
+  version "1.4.10"
   url "https://github.com/scalacenter/bloop/releases/download/v1.4.9/bloop-coursier.json"
-  sha256 "c453d4a9d87c33a46ff2e11796ed67d0d285030e2b9b37a29e0933c0509a097a"
+  sha256 "bb4b23ae8e44c0e0430efb6eb8ef3f158e3577563c1cf7e3168e304dbea121cf"
   bottle :unneeded
 
   depends_on "bash-completion"
