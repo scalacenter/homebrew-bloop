@@ -1,7 +1,7 @@
 class Bloop < Formula
   desc "Installs the Bloop CLI for Bloop, a build server to compile, test and run Scala fast"
   homepage "https://github.com/scalacenter/bloop"
-  version "1.5.3"
+  version "1.5.4"
   url "https://github.com/scalacenter/bloop/releases/download/v1.5.4/bloop-coursier.json"
   sha256 "e994afbac6e58ae6795bea76a50cb389887ebf5c488947792feaead420bac53e"
 
