@@ -2,25 +2,25 @@ class Bloop < Formula
   desc "Installs the Bloop CLI for Bloop, a build server to compile, test and run Scala fast"
   homepage "https://github.com/scalacenter/bloop"
   version "2.0.13"
-  url "https://github.com/scalacenter/bloop/releases/download/v2.0.13/bloop-coursier.json"
-  sha256 "991102528faea282a46f933bb7cb4862f530f752c1c674b530381c65cc7a4085"
+  url "https://github.com/scalacenter/bloop/releases/download/v2.0.15/bloop-coursier.json"
+  sha256 "b3305108f4d4e13006ff334711da94423c72d3fa04138311d5e41735b239c395"
 
   depends_on "bash-completion@2"
   depends_on "coursier/formulas/coursier"
   depends_on "openjdk"
 
   resource "bash_completions" do
-    url "https://github.com/scalacenter/bloop/releases/download/v2.0.13/bash-completions"
+    url "https://github.com/scalacenter/bloop/releases/download/v2.0.15/bash-completions"
     sha256 "da6b7ecd4109bd0ff98b1c452d9dd9d26eee0d28ff604f6c83fb8d3236a6bdd1"
   end
 
   resource "zsh_completions" do
-    url "https://github.com/scalacenter/bloop/releases/download/v2.0.13/zsh-completions"
+    url "https://github.com/scalacenter/bloop/releases/download/v2.0.15/zsh-completions"
     sha256 "58d32c3f005f7791237916d1b5cd3a942115236155a0b7eba8bf36391d06eff7"
   end
 
   resource "fish_completions" do
-    url "https://github.com/scalacenter/bloop/releases/download/v2.0.13/fish-completions"
+    url "https://github.com/scalacenter/bloop/releases/download/v2.0.15/fish-completions"
     sha256 "445ea76716f0e2c2f008fe22aca24b602667964691744926a5890e1c1a1217ff"
   end
 
